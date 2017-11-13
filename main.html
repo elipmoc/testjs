@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>‚Ù‚°</title>
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="KeyCon.js"></script>
+    <script type="text/javascript" src="CollisionControl.js"></script>
+    <script type="text/javascript" src="hoge.js"></script>
+    <script type="text/javascript" src="TitleScene.js"></script>
+    <script type="text/javascript" src="GameOverScene.js"></script>
+    <script type="text/javascript" src="ClearScene.js"></script>
+    <script type="text/javascript" src="GameScene.js"></script>
+
+    <style>
+        
+        body {
+            text-align: center;
+            background-repeat:repeat;
+            background-image: url("D.png");
+            background-color:cadetblue;
+        }
+        canvas {
+            border: 2px solid gray;
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+   
+    <canvas id="screen"></canvas>
+    <script>
+        var screen=document.getElementById('screen');
+        var game=new Game(screen);
+        game.AddScene(new TitleScene(screen,new SceneChanger(game)));
+    </script>
+</body>
+</html>
